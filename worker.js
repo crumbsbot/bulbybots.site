@@ -4,6 +4,34 @@ const MIGRATIONS_API = "https://migrated.crumbs.host/api_migrations.php";
 const html = String.raw`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07111d"><meta name="description" content="BulbyBots — projects, data and discoveries.">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAElElEQVR4nO2W
+W2wUZRTHf9/MbvdSdotQqkCKSSXEyEUNhBiDl0QE300bog/1ygOYoAnGSguz
+25ZaIAQENYGgkUhi0r5o9EVjAsSEF1HkoTGgUiEVFtJud7vtbmdn5js+TNtY
+2LYLAj7o/2WyM2fP9zvfueTA//qXpcq2FMsADECjkhoRBd0G9ChIeCgldwZR
+UEi9ObNd18w2JTT9DYioicjSLcsJR15B8STaqwYcTKMX1NdcuHyMhz4cQCwD
+ldS3B2D88Ev1Eaof/YhI8CVs+wKe/g7P+x0khGGuIGA+i2FWYBebiFkH/FQl
+BUVZKSkNIKIgobgwGmPhPSdQRi1u4WUqra9usP3l7Rj3x7cQqWyjUDhCtPl1
+Px0NulyIEgCWAUCh/SR25yX6Ns+d8T/p5jXIXiFrtfs+yqgbSt2AWAFU0iVj
+baSq8hCpq3XM39uLZRlsNZ4naNbhuoAInthEQpqiM8SsxFEyLRuoqvqcdHYZ
+c9t7yqmJEgCiQEGhtQ9Pf0EssRmA4eQxKuMvgjNmqAHTdzEybOONLqSqc4B8
+aw9azjLLemEimGlkXBe9gVJCf8sSKgIL8OQolmUwuP0ZRGZhDyxhpNBHZnAt
+qcxjFG2XgcH1DOYXk7XziCgc/Qnw3Fj0bskgpwRgqW9sqgexXRfsX0kmNaJ/
+49zlenJ2CoiSGz1FLGQDAZzAz9Tu7qM27qCUoOUMSs3manEeAJZ1MwDjb80w
+Ig5D9igAc3ZeZNVhh1B4BSDU7htFU4ejPUYzRb/qr6gxj3mUUkhFBIDEdMdP
+BSDeNQwjTDgy2//9fsh/qtVAfqy9alA6z8jlPKrBg8MugkJxHyIuQdK+s8S0
+rXgdQL1fsbnhswAEzcf9opzvcnpjkGDFJpScHzOOYwZMlnUXyVirGWxehEIQ
+1iJykerk0KRJWhaAUoJ0mSzal8b1viEUbPId9AhLFmwjsmAxnnwLgJY/CcWj
+OB0nMWmCWIbexjChYCNafzoW/YyzoEQKegRB4bhbiURXkduxGZXUGPyBnTqO
+2B8jorDVlwwPfIaWIGI2M6cpS3XdBygFqfSBsWnqzQRQWuNTbHDHW8h+Ybjt
+1cnf5cbKLrS2ofcI1959AhGFHAqWc1Sg5FvV7SFdJqphH0PJILHYEeydGyi6
+HVzpP4VSNgC9W2ZTM+cpzECCgPEIrquJRFaj1PeAc2uTcFKkXSaqwSPdvIZo
+dD8hcyUFJ4foFCgTQy0kXBGi6Bynf2QT8fBaIuGDeLqboewe5nX+MNM0nHkj
+GocAyLUux1BPI/oBlPIwjHMUnRNUJc9P2I8kThOtXkkxm2ZoZD3zOk5PB1He
+SiaWAQmZsqXEMvjxisnK+R45XiMaPgSApwfIjqyjpuOnqSDK3wknQG7oHD2R
+Z6k3Ud0eme1vEK88iBbwdD/ZoXXU7DpzKxvTzUssv7Cz299Edgnue4LdniLd
+8rDfHdakAEqP4n8ilXQRK0BV235y+XcwDaiI3UtF8LCfwqWTbv32A/wdIp7c
+Ta6wDde9iKbT/9hzh9b3Uhq/7t7G8N07dCqI63J/lyFustv+U/oLAaAQBG7X
+LGIAAAAASUVORK5CYII="><meta name="apple-mobile-web-app-title" content="BulbyBots">
 <title>BulbyBots — Projects, Data & Discoveries</title>
 <style>
 :root{color-scheme:dark;--bg:#050c16;--line:rgba(151,190,220,.19);--muted:#91a8ba;--text:#eff8ff;--teal:#65e3df;--violet:#c3a0ff;--green:#83f0bd}
