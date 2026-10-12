@@ -91,3 +91,12 @@ export default {
   return new Response(request.method === "HEAD" ? null : html,{headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=60, s-maxage=300","X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Content-Security-Policy":"default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'"}});
  }
 };
+
+
+/* Shared masthead finish */
+.top{background:linear-gradient(180deg,rgba(9,7,16,.92),rgba(9,7,16,.78));border-bottom:1px solid rgba(210,185,255,.14)}
+html[data-theme="violet"] .top{background:linear-gradient(180deg,rgba(9,7,16,.92),rgba(9,7,16,.78))}
+.project-links a{border:1px solid transparent;background:transparent;color:#a49bb8;font:500 12px Inter,ui-sans-serif,system-ui,sans-serif;transition:.2s}
+.project-links a:hover,.project-links a[aria-current="page"]{color:#f6f2ff;border-color:rgba(210,185,255,.14);background:rgba(255,255,255,.045);box-shadow:inset 0 0 18px rgba(170,145,255,.08)}
+.theme-toggle{border:1px solid rgba(170,145,255,.28);background:rgba(170,145,255,.07);color:#d8cbff;box-shadow:none}
+.theme-toggle:hover{border-color:rgba(255,139,214,.8);box-shadow:0 0 24px rgba(170,145,255,.12)}
