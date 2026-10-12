@@ -1,7 +1,7 @@
 const PCT_API = "https://migrated.crumbs.host/api.php";
 const MIGRATIONS_API = "https://migrated.crumbs.host/api_migrations.php";
 
-const html = String.raw\`<!doctype html>
+const html = String.raw`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07111d"><meta name="description" content="BulbyBots — projects, data and discoveries.">
 <title>BulbyBots — Projects, Data & Discoveries</title>
@@ -32,7 +32,7 @@ async function loadMig(){try{const r=await fetch('/api/migrations?action=overvie
 loadPct();loadMig();setInterval(()=>{loadPct();loadMig();},300000);
 document.querySelectorAll('.card').forEach(card=>card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',(e.clientX-r.left)+'px');card.style.setProperty('--my',(e.clientY-r.top)+'px');}));
 const canvas=document.querySelector('.stars'),ctx=canvas.getContext('2d'),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let w=0,h=0,stars=[],shot=null,nextShot=performance.now()+4500,raf=0;function resize(){const d=Math.min(devicePixelRatio||1,1.5);w=innerWidth;h=innerHeight;canvas.width=w*d;canvas.height=h*d;ctx.setTransform(d,0,0,d,0,0);stars=Array.from({length:Math.min(110,Math.round(w*h/16000))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.2+.3,s:Math.random()*.2+.04,p:Math.random()*6.28,c:['255,255,255','190,235,255','255,225,184','200,170,255'][Math.floor(Math.random()*4)]}));}function frame(t){ctx.clearRect(0,0,w,h);for(const s of stars){ctx.fillStyle='rgba('+s.c+','+(.2+.6*Math.abs(Math.sin(t/1000+s.p)))+')';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();if(!reduce){s.y-=s.s;if(s.y<0){s.y=h;s.x=Math.random()*w;}}}if(!reduce){if(!shot&&t>nextShot){shot={x:Math.random()*w*.7,y:Math.random()*h*.35,age:0};nextShot=t+9000+Math.random()*9000;}if(shot){shot.x+=10;shot.y+=4.5;shot.age++;const g=ctx.createLinearGradient(shot.x,shot.y,shot.x-95,shot.y-43);g.addColorStop(0,'rgba(255,255,255,.9)');g.addColorStop(1,'rgba(255,255,255,0)');ctx.strokeStyle=g;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(shot.x,shot.y);ctx.lineTo(shot.x-95,shot.y-43);ctx.stroke();if(shot.age>70)shot=null;}raf=requestAnimationFrame(frame);}}resize();raf=requestAnimationFrame(frame);addEventListener('resize',resize);addEventListener('pagehide',()=>cancelAnimationFrame(raf));const progress=document.querySelector('.scroll-progress');function scroll(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.setProperty('--p',max>0?scrollY/max:0);}addEventListener('scroll',scroll,{passive:true});scroll();})();
-</script></body></html>\`;
+</script></body></html>`;
 
 export default {
  async fetch(request) {
