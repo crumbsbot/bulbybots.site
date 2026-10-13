@@ -98,6 +98,29 @@ html[data-theme="violet"] .top{background:linear-gradient(180deg,rgba(9,7,16,.92
 </div>
 <script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261013-88px"></script>
 <script>
+/* Homepage failsafe: enforce the canonical desktop masthead even if the shared Worker serves stale CSS. */
+customElements.whenDefined("bulbybot-header").then(() => {
+  const header = document.querySelector("bulbybot-header");
+  if (!header || !header.shadowRoot) return;
+  const style = document.createElement("style");
+  style.textContent = `
+    .bar{box-sizing:border-box!important;height:88px!important;min-height:88px!important;padding:0 clamp(18px,5.2vw,84px)!important;gap:24px!important}
+    .mark{box-sizing:border-box!important;width:42px!important;height:42px!important;flex:0 0 42px!important;border-radius:14px!important;padding:4px!important}
+    .mark img{display:block!important;width:32px!important;height:32px!important;object-fit:contain!important}
+    .brand{gap:12px!important}
+    .brand-copy strong{font-family:"Space Grotesk",Inter,sans-serif!important;font-size:17px!important;letter-spacing:.23em!important;line-height:1.15!important}
+    .brand-copy small{font-family:"IBM Plex Mono",monospace!important;font-size:8px!important;letter-spacing:.12em!important;margin-top:4px!important}
+    nav{gap:8px!important}
+    nav a{padding:10px 14px!important;font-size:12px!important}
+    .theme{height:38px!important;padding:10px 13px!important;font-size:11px!important}
+    @media(max-width:900px){.bar{gap:14px!important}nav{gap:2px!important}}
+    @media(max-width:680px){.bar{height:auto!important;min-height:76px!important;padding:10px clamp(18px,5.2vw,84px)!important;gap:10px!important;flex-wrap:wrap!important}.brand{gap:9px!important}.mark{width:38px!important;height:38px!important;flex-basis:38px!important}.mark img{width:29px!important;height:29px!important}.brand-copy strong{font-size:14px!important}.brand-copy small{font-size:7px!important;letter-spacing:.08em!important}.theme{padding:9px 10px!important}nav{order:3;width:100%;margin:0;padding:2px 0 3px;gap:2px!important}nav a{font-size:11px!important;padding:8px 9px!important}}
+    @media(max-width:390px){.brand-copy small{letter-spacing:.04em!important}nav a{font-size:10px!important;padding:8px 7px!important}.theme{gap:5px!important;padding:8px!important}}
+  `;
+  header.shadowRoot.appendChild(style);
+});
+</script>
+<script>
 (()=>{const $=id=>document.getElementById(id);const year=$('year');if(year)year.textContent=new Date().getFullYear();let violet=document.documentElement.dataset.theme==='violet';const sharedHeader=document.querySelector('bulbybot-header');if(sharedHeader){sharedHeader.setAttribute('theme',violet?'violet':'aurora');sharedHeader.addEventListener('bulbybot-theme-toggle',event=>{violet=event.detail?.theme==='violet';if(violet)document.documentElement.dataset.theme='violet';else delete document.documentElement.dataset.theme;try{localStorage.setItem('crumbs-theme',violet?'pi':'green')}catch(e){}});}const fmt=(n,d=2)=>Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});const setError=(prefix,msg)=>{const v=$(prefix+'-value');v.classList.remove('loading');v.classList.add('error');v.textContent='Temporarily unavailable';$(prefix+'-note').textContent=msg;$(prefix+'-updated').textContent='Not connected';};
 async function loadPct(){try{const r=await fetch('/api/pct',{headers:{Accept:'application/json'},cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const raw=await r.json();const data=raw&&raw.data&&raw.hop1LeftPi===undefined?raw.data:raw;const n=Number(data.hop1LeftPi);if(!Number.isFinite(n)||n<0)throw Error('missing total');const v=$('pct-value');v.classList.remove('loading','error');v.textContent=fmt(n)+' π';$('pct-note').textContent='From the PCT Funds live overview';$('pct-updated').textContent='Updated '+new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});}catch(e){setError('pct','Could not read the live PCT overview.');}}
 async function loadMig(){try{const r=await fetch('/api/migrations?action=overview',{headers:{Accept:'application/json'},cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);let raw=await r.json();if(raw&&raw.data)raw=raw.data;const s=raw.summary||raw.totals||raw.overview||raw;const first=Number(s.first_count??s.first_migrations??s.firstMigrations);const second=Number(s.second_count??s.second_migrations??s.secondMigrations);let n=Number(s.total_count??s.total_migrations??s.totalMigrations);if(!Number.isFinite(n)||n<0)n=first+second;if(!Number.isFinite(n)||n<0||!Number.isFinite(first)||!Number.isFinite(second))throw Error('missing total');const v=$('mig-value');v.classList.remove('loading','error');v.textContent=fmt(n,0);$('mig-note').textContent='1st + 2nd migration records in the live overview';$('mig-updated').textContent='Updated '+new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});}catch(e){setError('mig','Could not read the live migration overview.');}}
