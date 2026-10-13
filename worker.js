@@ -204,7 +204,7 @@ export default {
       "Cache-Control":"public, max-age=60, s-maxage=300",
       "X-Content-Type-Options":"nosniff",
       "Referrer-Policy":"strict-origin-when-cross-origin",
-      "Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; img-src 'self' https://crumbs.bulbybots.site data:; base-uri 'none'; frame-ancestors 'none'"
+      "Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://cloudflareinsights.com; img-src 'self' https://crumbs.bulbybots.site data:; base-uri 'none'; frame-ancestors 'none'"
     }});
   }
 };
