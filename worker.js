@@ -23,6 +23,7 @@ body{margin:0;min-height:100vh;overflow-x:hidden;background:var(--bg);color:var(
 body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 8% 8%,rgba(60,235,210,.13),transparent 38%),radial-gradient(ellipse at 92% 10%,rgba(155,91,255,.15),transparent 40%)}
 .ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.45;background-image:radial-gradient(circle at 24% 17%,#a9a2ff 1px,transparent 1.5px),radial-gradient(circle at 72% 29%,#79f5de 1px,transparent 1.5px),radial-gradient(circle at 88% 54%,#e7b3ff 1px,transparent 1.5px),radial-gradient(circle at 11% 73%,#79f5de 1px,transparent 1.5px);background-size:370px 290px,430px 350px,510px 390px,460px 330px}
 bulbybot-header{display:block;width:100%;position:relative;z-index:5}
+.header-shell{width:min(1800px,calc(100% - clamp(36px,5.6vw,92px)));margin:0 auto}
 .container{width:min(1800px,calc(100% - clamp(36px,10.4vw,168px)));margin:0 auto}
 .hero{padding:62px 0 34px}
 .eyebrow{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.19em;text-transform:uppercase;color:var(--teal)}
@@ -73,7 +74,7 @@ footer a:hover{color:var(--teal)}
 </head>
 <body>
 <div class="ambient" aria-hidden="true"></div>
-<bulbybot-header active="home" brand="CRUMBS" theme="aurora"></bulbybot-header>
+<div class="header-shell"><bulbybot-header active="home" brand="CRUMBS" theme="aurora"></bulbybot-header></div>
 <div class="container">
 <main>
 <section class="hero">
@@ -103,7 +104,7 @@ footer a:hover{color:var(--teal)}
 </main>
 <footer><span>© <span id="year"></span> BulbyBots · Independent Pi Network tools</span><span><a href="https://crumbs.bulbybots.site/">Crumbs</a> · <a href="https://crumbs.bulbybots.site/bubblemap/">Bubblemaps</a> · <a href="https://crumbs.bulbybots.site/nodecalc/">Nodecalc</a></span></footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261013-clean-home"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261013-uniform-edges"></script>
 <script>
 (function(){
   var year=document.getElementById("year");
