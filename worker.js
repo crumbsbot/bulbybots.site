@@ -104,7 +104,7 @@ footer a:hover{color:var(--teal)}
 </main>
 <footer><span>© <span id="year"></span> BulbyBots · Independent Pi Network tools</span><span><a href="https://crumbs.bulbybots.site/">Crumbs</a> · <a href="https://crumbs.bulbybots.site/bubblemap/">Bubblemaps</a> · <a href="https://crumbs.bulbybots.site/nodecalc/">Nodecalc</a></span></footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261013-full-bleed"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261013-canonical-crumbs"></script>
 <script>
 (function(){
   var year=document.getElementById("year");
