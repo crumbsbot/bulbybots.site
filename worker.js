@@ -104,7 +104,7 @@ footer a:hover{color:var(--teal)}
 </main>
 <footer><span>© <span id="year"></span> BulbyBots · Independent Pi Network tools</span><span><a href="https://crumbs.bulbybots.site/">Crumbs</a> · <a href="https://crumbs.bulbybots.site/bubblemap/">Bubblemaps</a> · <a href="https://crumbs.bulbybots.site/nodecalc/">Nodecalc</a></span></footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261013-canonical-frame"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261013-full-bleed"></script>
 <script>
 (function(){
   var year=document.getElementById("year");
@@ -204,7 +204,7 @@ export default {
       "Cache-Control":"public, max-age=60, s-maxage=300",
       "X-Content-Type-Options":"nosniff",
       "Referrer-Policy":"strict-origin-when-cross-origin",
-      "Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; img-src 'self' https://crumbs.bulbybots.site data:; base-uri 'none'; frame-ancestors 'none'"
+      "Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; img-src 'self' https://crumbs.bulbybots.site data:; base-uri 'none'; frame-ancestors 'none'"
     }});
   }
 };
