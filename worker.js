@@ -126,6 +126,6 @@ export default {
    }
   }
   if (url.pathname !== "/" && url.pathname !== "/index.html") return new Response("Not found",{status:404,headers:{"Content-Type":"text/plain; charset=utf-8"}});
-  return new Response(request.method === "HEAD" ? null : html,{headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=60, s-maxage=300","X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'"}});
+  return new Response(request.method === "HEAD" ? null : html,{headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=60, s-maxage=300","X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; img-src 'self' https://crumbs.bulbybots.site data:; base-uri 'none'; frame-ancestors 'none'"}});
  }
 };
