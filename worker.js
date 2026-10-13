@@ -74,7 +74,7 @@ footer a:hover{color:var(--teal)}
 </head>
 <body>
 <div class="ambient" aria-hidden="true"></div>
-<div class="header-shell"><bulbybot-header active="home" brand="CRUMBS" theme="aurora"></bulbybot-header></div>
+<bulbybot-header active="home" brand="CRUMBS" theme="aurora"></bulbybot-header>
 <div class="container">
 <main>
 <section class="hero">
