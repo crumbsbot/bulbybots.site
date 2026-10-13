@@ -1,7 +1,7 @@
 const PCT_API = "https://migrated.crumbs.host/api.php";
 const MIGRATIONS_API = "https://migrated.crumbs.host/api_migrations.php";
 
-const html = String.raw\`<!doctype html>
+const html = String.raw`<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -171,7 +171,7 @@ footer a:hover{color:var(--teal)}
 })();
 </script>
 </body>
-</html>\`;
+</html>`;
 
 export default {
   async fetch(request) {
