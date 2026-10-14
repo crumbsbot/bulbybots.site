@@ -102,13 +102,11 @@ footer a:hover{color:var(--teal)}
 <div class="more"><div class="plus" aria-hidden="true">+</div><div><h3>More projects are on the way</h3><p>This directory is designed to grow. New tools and dashboards can be added without disturbing the existing projects.</p></div></div>
 </section>
 </main>
-<footer><span>© <span id="year"></span> BulbyBots · Independent Pi Network tools</span><span><a href="https://crumbs.bulbybots.site/">Crumbs</a> · <a href="https://crumbs.bulbybots.site/bubblemap/">Bubblemaps</a> · <a href="https://crumbs.bulbybots.site/nodecalc/">Nodecalc</a></span></footer>
+<bulbybot-footer></bulbybot-footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261015-shared-v3"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261015-shared-v4"></script>
 <script>
 (function(){
-  var year=document.getElementById("year");
-  if(year)year.textContent=String(new Date().getFullYear());
   var header=document.querySelector("bulbybot-header");
   try{
     if(header){
