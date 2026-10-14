@@ -12,7 +12,6 @@ const html = String.raw`<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="https://crumbs.bulbybots.site/tt_pi_32.png">
 <script>try{if(localStorage.getItem("crumbs-theme")==="pi")document.documentElement.dataset.theme="violet"}catch(e){}</script>
 <style>
 :root{color-scheme:dark;--bg:#090710;--panel:#0c1118;--line:rgba(210,185,255,.14);--muted:#a49bb8;--text:#f6f2ff;--teal:#79f5de;--violet:#aa91ff;--green:#79f5de}
