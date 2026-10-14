@@ -103,7 +103,7 @@ footer a:hover{color:var(--teal)}
 </main>
 <bulbybot-footer></bulbybot-footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261015-shared-v6"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261015-shared-v7"></script>
 <script>
 (function(){
   var header=document.querySelector("bulbybot-header");
