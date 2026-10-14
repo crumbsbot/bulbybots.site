@@ -7,6 +7,8 @@ const html = String.raw`<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090710">
+<link rel="icon" type="image/png" href="https://bulbybot-header.bulbybot.workers.dev/tt_pi_32.png?v=20261015-v9">
+<link rel="apple-touch-icon" type="image/png" href="https://bulbybot-header.bulbybot.workers.dev/tt_pi_32.png?v=20261015-v9">
 <meta name="description" content="BulbyBots — independent tools, Pi Network data and on-chain insight.">
 <title>BulbyBots — Projects, Data & Discoveries</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,7 +105,7 @@ footer a:hover{color:var(--teal)}
 </main>
 <bulbybot-footer></bulbybot-footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261015-shared-v8"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261015-shared-v9"></script>
 <script>
 (function(){
   var header=document.querySelector("bulbybot-header");
