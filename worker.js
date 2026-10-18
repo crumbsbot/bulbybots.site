@@ -10,7 +10,7 @@ const legalPage = (title, description, body) => String.raw`<!doctype html>
 <meta name="description" content="${description}">
 <link rel="icon" type="image/png" href="https://bulbybot-header.bulbybot.workers.dev/tt_pi_32.png?v=20261015-v9">
 <link rel="apple-touch-icon" type="image/png" href="https://bulbybot-header.bulbybot.workers.dev/tt_pi_32.png?v=20261015-v9">
-<title>${title} | BulbyBots Pi Market</title>
+<title>${title} | BulbyBots Reddit Apps</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,28 +20,28 @@ const legalPage = (title, description, body) => String.raw`<!doctype html>
 </style>
 </head>
 <body>
-<bulbybot-header active="pi-market" brand="CRUMBS" theme="aurora"></bulbybot-header>
+<bulbybot-header brand="CRUMBS" theme="aurora"></bulbybot-header>
 <div class="container">
 <main class="content">
-<div class="eyebrow">BulbyBots · Pi Market</div>
+<div class="eyebrow">BulbyBots · Reddit Apps</div>
 <h1>${title}</h1>
 <p class="intro">${description}</p>
 <div class="updated">Effective date: October 18, 2026</div>
 <article class="legal">${body}</article>
-<nav class="links" aria-label="Legal pages"><a href="/pi-market/terms">Terms &amp; Conditions</a><a href="/pi-market/privacy">Privacy Policy</a><a href="https://bulbybots.site/">BulbyBots home ↗</a></nav>
+<nav class="links" aria-label="Legal pages"><a href="/reddit-apps/terms">Terms &amp; Conditions</a><a href="/reddit-apps/privacy">Privacy Policy</a><a href="https://bulbybots.site/">BulbyBots home ↗</a></nav>
 </main>
-<nav class="site-legal-links" aria-label="Legal information"><a href="/pi-market/terms">Pi Market Terms &amp; Conditions</a><a href="/pi-market/privacy">Pi Market Privacy Policy</a></nav>
+<nav class="site-legal-links" aria-label="Legal information"><a href="/reddit-apps/terms">Reddit Apps Terms &amp; Conditions</a><a href="/reddit-apps/privacy">Reddit Apps Privacy Policy</a></nav>
 <bulbybot-footer></bulbybot-footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261018-pi-market-legal-v1"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261018-reddit-app-legal-v1"></script>
 </body>
 </html>`;
 
 const termsPage = legalPage(
   "Terms & Conditions",
-  "Terms governing your use of the BulbyBots Pi Market app and its market-data displays.",
+  "Terms governing use of BulbyBots Reddit apps and integrations, including Pi Market and future apps.",
   String.raw`<h2>1. About Pi Market</h2>
-<p>BulbyBots Pi Market provides informational displays of Pi Network market prices and related market statistics. By accessing or using the app, you agree to these terms. If you do not agree, please do not use the app.</p>
+<p>These terms apply to Reddit apps and integrations published or operated by BulbyBots, including Pi Market and any other BulbyBots Reddit app that links to this policy. By accessing or using a covered app, you agree to these terms. If you do not agree, please do not use that app.</p>
 <h2>2. Information only — not financial advice</h2>
 <p>All prices, market capitalisation figures, trading volumes, charts and other information are provided for general information and educational purposes only. Nothing in Pi Market is investment, financial, trading, tax or legal advice, or a recommendation to buy, sell or hold any asset.</p>
 <h2>3. Third-party data and accuracy</h2>
@@ -64,17 +64,17 @@ const termsPage = legalPage(
 
 const privacyPage = legalPage(
   "Privacy Policy",
-  "How the BulbyBots Pi Market app handles information and third-party market-data services.",
+  "How information is handled across BulbyBots Reddit apps and integrations, including Pi Market and future apps.",
   String.raw`<h2>1. Scope</h2>
-<p>This policy explains privacy considerations for the BulbyBots Pi Market app and its associated market-data display. Reddit also operates its own platform and services; Reddit's privacy policy applies to information Reddit collects and processes.</p>
+<p>This policy applies to Reddit apps and integrations published or operated by BulbyBots, including Pi Market and any other BulbyBots Reddit app that links to this policy. Reddit separately processes information under its own privacy policy and platform terms.</p>
 <h2>2. Information we ask you to provide</h2>
-<p>Pi Market does not ask you to submit your name, email address, payment details or wallet secret keys to view market information. Never share passwords, recovery phrases or private keys with us or with any market-data app.</p>
+<p>BulbyBots Reddit apps generally do not require you to submit your name, email address, payment details or wallet secret keys unless a specific app clearly explains otherwise. Never share passwords, recovery phrases or private keys with an app.</p>
 <h2>3. App and platform information</h2>
-<p>When you use the app through Reddit, Reddit may process account information, content, device information and usage data under its own policies and settings. Hosting, security and operational providers may also process limited technical request information, such as IP address, timestamps and diagnostic logs, as needed to deliver and protect the service.</p>
+<p>When you use a covered app through Reddit, Reddit may process account information, content, device information and usage data under its own policies and settings. Hosting, security and operational providers may also process limited technical request information, such as IP address, timestamps and diagnostic logs, as needed to deliver and protect the service.</p>
 <h2>4. Market-data providers</h2>
-<p>The app requests market information from third-party data services. Those providers may receive technical information associated with requests and process it under their own privacy policies. We do not control their independent practices. API credentials used by the service should be kept server-side and are not intended to be displayed to app users.</p>
+<p>Some covered apps may request information from third-party data services, such as market-data providers. Those providers may receive technical information associated with requests and process it under their own privacy policies. We do not control their independent practices. App credentials should be kept server-side and are not intended to be displayed to users.</p>
 <h2>5. Storage and sharing</h2>
-<p>Pi Market is designed to display market data and does not require users to create a separate account with BulbyBots. We do not sell personal information. Information may be processed by service providers operating the app, or disclosed where required by law or reasonably necessary to protect the service, its users or the public.</p>
+<p>Covered apps may not require a separate BulbyBots account; any app-specific collection or account feature should be explained within that app. We do not sell personal information. Information may be processed by service providers operating the app, or disclosed where required by law or reasonably necessary to protect the service, its users or the public.</p>
 <h2>6. Retention and security</h2>
 <p>Technical logs, where generated by hosting or platform providers, are retained according to those providers' operational and retention practices. Reasonable measures are used to protect the service, but no internet transmission or storage system can be guaranteed completely secure.</p>
 <h2>7. Children</h2>
@@ -283,10 +283,10 @@ export default {
         return Response.json({ok:false,error:"Live data feed unavailable"},{status:502,headers:{"Cache-Control":"no-store","X-Content-Type-Options":"nosniff"}});
       }
     }
-    if (url.pathname === "/pi-market/terms" || url.pathname === "/pi-market/terms/") {
+    if (["/reddit-apps/terms", "/reddit-apps/terms/", "/pi-market/terms", "/pi-market/terms/"].includes(url.pathname)) {
       return new Response(request.method === "HEAD" ? null : termsPage,{headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=300","X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://cloudflareinsights.com; img-src 'self' https://bulbybot-header.bulbybot.workers.dev data:; base-uri 'none'; frame-ancestors 'none'"}});
     }
-    if (url.pathname === "/pi-market/privacy" || url.pathname === "/pi-market/privacy/") {
+    if (["/reddit-apps/privacy", "/reddit-apps/privacy/", "/pi-market/privacy", "/pi-market/privacy/"].includes(url.pathname)) {
       return new Response(request.method === "HEAD" ? null : privacyPage,{headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=300","X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://cloudflareinsights.com; img-src 'self' https://bulbybot-header.bulbybot.workers.dev data:; base-uri 'none'; frame-ancestors 'none'"}});
     }
     if (url.pathname !== "/" && url.pathname !== "/index.html") {
