@@ -1,16 +1,16 @@
 const PCT_API = "https://migrated.crumbs.host/api.php";
 const MIGRATIONS_API = "https://migrated.crumbs.host/api_migrations.php";
 
-const legalPage = (title, description, body) => String.raw\`<!doctype html>
+const legalPage = (title, description, body) => String.raw`<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090710">
-<meta name="description" content="\${description}">
+<meta name="description" content="${description}">
 <link rel="icon" type="image/png" href="https://bulbybot-header.bulbybot.workers.dev/tt_pi_32.png?v=20261015-v9">
 <link rel="apple-touch-icon" type="image/png" href="https://bulbybot-header.bulbybot.workers.dev/tt_pi_32.png?v=20261015-v9">
-<title>\${title} | BulbyBots Pi Market</title>
+<title>${title} | BulbyBots Pi Market</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,22 +24,22 @@ const legalPage = (title, description, body) => String.raw\`<!doctype html>
 <div class="container">
 <main class="content">
 <div class="eyebrow">BulbyBots · Pi Market</div>
-<h1>\${title}</h1>
-<p class="intro">\${description}</p>
+<h1>${title}</h1>
+<p class="intro">${description}</p>
 <div class="updated">Effective date: October 18, 2026</div>
-<article class="legal">\${body}</article>
+<article class="legal">${body}</article>
 <nav class="links" aria-label="Legal pages"><a href="/pi-market/terms">Terms &amp; Conditions</a><a href="/pi-market/privacy">Privacy Policy</a><a href="https://bulbybots.site/">BulbyBots home ↗</a></nav>
 </main>
 <bulbybot-footer></bulbybot-footer>
 </div>
 <script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261017-pct-funds-v1"></script>
 </body>
-</html>\`;
+</html>`;
 
 const termsPage = legalPage(
   "Terms & Conditions",
   "Terms governing your use of the BulbyBots Pi Market app and its market-data displays.",
-  String.raw\`<h2>1. About Pi Market</h2>
+  String.raw`<h2>1. About Pi Market</h2>
 <p>BulbyBots Pi Market provides informational displays of Pi Network market prices and related market statistics. By accessing or using the app, you agree to these terms. If you do not agree, please do not use the app.</p>
 <h2>2. Information only — not financial advice</h2>
 <p>All prices, market capitalisation figures, trading volumes, charts and other information are provided for general information and educational purposes only. Nothing in Pi Market is investment, financial, trading, tax or legal advice, or a recommendation to buy, sell or hold any asset.</p>
@@ -58,13 +58,13 @@ const termsPage = legalPage(
 <h2>9. Changes to these terms</h2>
 <p>These terms may be updated from time to time. The effective date above indicates when this page was last revised. Continued use after an update means you accept the revised terms.</p>
 <h2>10. Contact</h2>
-<p>For questions about these terms, contact the BulbyBots project through its official community or repository channels.</p>\`
+<p>For questions about these terms, contact the BulbyBots project through its official community or repository channels.</p>`
 );
 
 const privacyPage = legalPage(
   "Privacy Policy",
   "How the BulbyBots Pi Market app handles information and third-party market-data services.",
-  String.raw\`<h2>1. Scope</h2>
+  String.raw`<h2>1. Scope</h2>
 <p>This policy explains privacy considerations for the BulbyBots Pi Market app and its associated market-data display. Reddit also operates its own platform and services; Reddit's privacy policy applies to information Reddit collects and processes.</p>
 <h2>2. Information we ask you to provide</h2>
 <p>Pi Market does not ask you to submit your name, email address, payment details or wallet secret keys to view market information. Never share passwords, recovery phrases or private keys with us or with any market-data app.</p>
@@ -83,7 +83,7 @@ const privacyPage = legalPage(
 <h2>9. Changes to this policy</h2>
 <p>We may revise this policy as the app or its providers change. The effective date above indicates when this page was last revised.</p>
 <h2>10. Contact</h2>
-<p>For questions about this policy, contact the BulbyBots project through its official community or repository channels.</p>\`
+<p>For questions about this policy, contact the BulbyBots project through its official community or repository channels.</p>`
 );
 
 
