@@ -40,14 +40,14 @@ const legalPage = (title, description, body) => String.raw`<!doctype html>
 const termsPage = legalPage(
   "Terms & Conditions",
   "Terms governing use of BulbyBots Reddit apps and integrations, including Pi Market and future apps.",
-  String.raw`<h2>1. About Pi Market</h2>
+  String.raw`<h2>1. About these apps</h2>
 <p>These terms apply to Reddit apps and integrations published or operated by BulbyBots, including Pi Market and any other BulbyBots Reddit app that links to this policy. By accessing or using a covered app, you agree to these terms. If you do not agree, please do not use that app.</p>
 <h2>2. Information only — not financial advice</h2>
-<p>All prices, market capitalisation figures, trading volumes, charts and other information are provided for general information and educational purposes only. Nothing in Pi Market is investment, financial, trading, tax or legal advice, or a recommendation to buy, sell or hold any asset.</p>
+<p>Content and features provided by covered apps are for general informational and educational purposes unless an app explicitly says otherwise. Any market prices, market capitalisation figures, trading volumes, charts or digital-asset information are not investment, financial, trading, tax or legal advice, and are not a recommendation to buy, sell or hold any asset.</p>
 <h2>3. Third-party data and accuracy</h2>
-<p>Market information may be obtained from third-party exchanges, data providers or public sources. Figures can be delayed, incomplete, estimated, inconsistent between providers or temporarily unavailable. We do not guarantee that any data is accurate, complete, current or uninterrupted. Displayed prices may differ from prices available on an exchange.</p>
+<p>Information or functionality may depend on third-party services, data providers, public sources or external platforms. Such information can be delayed, incomplete, inaccurate or temporarily unavailable. We do not guarantee that content, data or services are accurate, complete, current or uninterrupted. Where an app displays market prices, they may differ from prices available on an exchange.</p>
 <h2>4. Your decisions and risk</h2>
-<p>You are responsible for independently verifying information and making your own decisions. Digital assets are volatile and involve substantial risk, including the possible loss of all funds. Do not rely solely on this app when making financial decisions.</p>
+<p>You are responsible for independently verifying information and making your own decisions when using an app. Digital assets, where relevant, are volatile and involve substantial risk, including the possible loss of all funds. Do not rely solely on an app when making financial decisions.</p>
 <h2>5. Availability and changes</h2>
 <p>We may update, suspend or discontinue any part of the app or its data sources at any time. We do not promise uninterrupted availability or a particular update frequency.</p>
 <h2>6. Acceptable use</h2>
