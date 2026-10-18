@@ -33,7 +33,7 @@ const legalPage = (title, description, body) => String.raw`<!doctype html>
 <nav class="site-legal-links" aria-label="Legal information"><a href="/pi-market/terms">Pi Market Terms &amp; Conditions</a><a href="/pi-market/privacy">Pi Market Privacy Policy</a></nav>
 <bulbybot-footer></bulbybot-footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261017-pct-funds-v1"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261018-pi-market-legal-v1"></script>
 </body>
 </html>`;
 
@@ -193,7 +193,7 @@ footer a:hover{color:var(--teal)}
 <nav class="site-legal-links" aria-label="Legal information"><a href="/pi-market/terms">Pi Market Terms &amp; Conditions</a><a href="/pi-market/privacy">Pi Market Privacy Policy</a></nav>
 <bulbybot-footer></bulbybot-footer>
 </div>
-<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261017-pct-funds-v1"></script>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261018-pi-market-legal-v1"></script>
 <script>
 (function(){
   var header=document.querySelector("bulbybot-header");
