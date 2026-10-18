@@ -1,6 +1,92 @@
 const PCT_API = "https://migrated.crumbs.host/api.php";
 const MIGRATIONS_API = "https://migrated.crumbs.host/api_migrations.php";
 
+const legalPage = (title, description, body) => String.raw\`<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090710">
+<meta name="description" content="\${description}">
+<link rel="icon" type="image/png" href="https://bulbybot-header.bulbybot.workers.dev/tt_pi_32.png?v=20261015-v9">
+<link rel="apple-touch-icon" type="image/png" href="https://bulbybot-header.bulbybot.workers.dev/tt_pi_32.png?v=20261015-v9">
+<title>\${title} | BulbyBots Pi Market</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#090710;--panel:#11101c;--line:rgba(210,185,255,.18);--muted:#aaa2bb;--text:#f6f2ff;--teal:#79f5de;--violet:#aa91ff}
+*{box-sizing:border-box}html{min-height:100%;scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 10% 0%,rgba(60,235,210,.12),transparent 38%),radial-gradient(ellipse at 90% 10%,rgba(155,91,255,.15),transparent 40%),var(--bg);color:var(--text);font-family:"DM Sans",Inter,system-ui,sans-serif}bulbybot-header,bulbybot-footer{display:block}.container{width:min(1000px,calc(100% - 36px));margin:0 auto}.content{padding:54px 0 70px}.eyebrow{color:var(--teal);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}h1{margin:12px 0 12px;font:600 clamp(36px,6vw,54px)/1.1 "Space Grotesk",sans-serif;letter-spacing:-.04em}.intro{max-width:760px;color:#c0b8ce;font-size:16px;line-height:1.75}.updated{margin-top:20px;color:var(--muted);font-size:12px}.legal{margin-top:28px;padding:clamp(20px,4vw,38px);border:1px solid var(--line);border-radius:20px;background:rgba(17,16,28,.88);box-shadow:0 20px 70px rgba(0,0,0,.2)}h2{margin:30px 0 10px;font:600 21px "Space Grotesk",sans-serif}h2:first-child{margin-top:0}p,li{color:#c7bfd4;font-size:14px;line-height:1.8}ul{padding-left:22px}a{color:var(--teal);text-underline-offset:3px}.links{display:flex;gap:18px;flex-wrap:wrap;margin:22px 0 0}.links a{font-size:13px;font-weight:700}footer{margin-top:34px;padding:20px 0 28px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}@media(max-width:600px){.content{padding-top:38px}.intro{font-size:14px}.legal{padding:20px}p,li{font-size:13px}}
+</style>
+</head>
+<body>
+<bulbybot-header active="pi-market" brand="CRUMBS" theme="aurora"></bulbybot-header>
+<div class="container">
+<main class="content">
+<div class="eyebrow">BulbyBots · Pi Market</div>
+<h1>\${title}</h1>
+<p class="intro">\${description}</p>
+<div class="updated">Effective date: October 18, 2026</div>
+<article class="legal">\${body}</article>
+<nav class="links" aria-label="Legal pages"><a href="/pi-market/terms">Terms &amp; Conditions</a><a href="/pi-market/privacy">Privacy Policy</a><a href="https://bulbybots.site/">BulbyBots home ↗</a></nav>
+</main>
+<bulbybot-footer></bulbybot-footer>
+</div>
+<script src="https://bulbybot-header.bulbybot.workers.dev/bulbybot-header.js?v=20261017-pct-funds-v1"></script>
+</body>
+</html>\`;
+
+const termsPage = legalPage(
+  "Terms & Conditions",
+  "Terms governing your use of the BulbyBots Pi Market app and its market-data displays.",
+  String.raw\`<h2>1. About Pi Market</h2>
+<p>BulbyBots Pi Market provides informational displays of Pi Network market prices and related market statistics. By accessing or using the app, you agree to these terms. If you do not agree, please do not use the app.</p>
+<h2>2. Information only — not financial advice</h2>
+<p>All prices, market capitalisation figures, trading volumes, charts and other information are provided for general information and educational purposes only. Nothing in Pi Market is investment, financial, trading, tax or legal advice, or a recommendation to buy, sell or hold any asset.</p>
+<h2>3. Third-party data and accuracy</h2>
+<p>Market information may be obtained from third-party exchanges, data providers or public sources. Figures can be delayed, incomplete, estimated, inconsistent between providers or temporarily unavailable. We do not guarantee that any data is accurate, complete, current or uninterrupted. Displayed prices may differ from prices available on an exchange.</p>
+<h2>4. Your decisions and risk</h2>
+<p>You are responsible for independently verifying information and making your own decisions. Digital assets are volatile and involve substantial risk, including the possible loss of all funds. Do not rely solely on this app when making financial decisions.</p>
+<h2>5. Availability and changes</h2>
+<p>We may update, suspend or discontinue any part of the app or its data sources at any time. We do not promise uninterrupted availability or a particular update frequency.</p>
+<h2>6. Acceptable use</h2>
+<p>You agree not to misuse the app, interfere with its operation, attempt to bypass security measures, or use its data in a way that violates applicable law or third-party terms.</p>
+<h2>7. Intellectual property and third-party services</h2>
+<p>The app's own design and content belong to their respective owners. Third-party names, marks and data remain the property of their respective owners. Mention of a provider does not imply endorsement or affiliation.</p>
+<h2>8. Disclaimer and limitation</h2>
+<p>To the extent permitted by applicable law, the app is provided on an “as is” and “as available” basis without warranties of any kind. To the extent permitted by law, BulbyBots is not liable for losses arising from reliance on the app, data errors, service interruptions or third-party services. Nothing in these terms excludes liability that cannot legally be excluded.</p>
+<h2>9. Changes to these terms</h2>
+<p>These terms may be updated from time to time. The effective date above indicates when this page was last revised. Continued use after an update means you accept the revised terms.</p>
+<h2>10. Contact</h2>
+<p>For questions about these terms, contact the BulbyBots project through its official community or repository channels.</p>\`
+);
+
+const privacyPage = legalPage(
+  "Privacy Policy",
+  "How the BulbyBots Pi Market app handles information and third-party market-data services.",
+  String.raw\`<h2>1. Scope</h2>
+<p>This policy explains privacy considerations for the BulbyBots Pi Market app and its associated market-data display. Reddit also operates its own platform and services; Reddit's privacy policy applies to information Reddit collects and processes.</p>
+<h2>2. Information we ask you to provide</h2>
+<p>Pi Market does not ask you to submit your name, email address, payment details or wallet secret keys to view market information. Never share passwords, recovery phrases or private keys with us or with any market-data app.</p>
+<h2>3. App and platform information</h2>
+<p>When you use the app through Reddit, Reddit may process account information, content, device information and usage data under its own policies and settings. Hosting, security and operational providers may also process limited technical request information, such as IP address, timestamps and diagnostic logs, as needed to deliver and protect the service.</p>
+<h2>4. Market-data providers</h2>
+<p>The app requests market information from third-party data services. Those providers may receive technical information associated with requests and process it under their own privacy policies. We do not control their independent practices. API credentials used by the service should be kept server-side and are not intended to be displayed to app users.</p>
+<h2>5. Storage and sharing</h2>
+<p>Pi Market is designed to display market data and does not require users to create a separate account with BulbyBots. We do not sell personal information. Information may be processed by service providers operating the app, or disclosed where required by law or reasonably necessary to protect the service, its users or the public.</p>
+<h2>6. Retention and security</h2>
+<p>Technical logs, where generated by hosting or platform providers, are retained according to those providers' operational and retention practices. Reasonable measures are used to protect the service, but no internet transmission or storage system can be guaranteed completely secure.</p>
+<h2>7. Children</h2>
+<p>The app is not intended to solicit personal information from children. If you believe personal information has been provided to us in connection with the app and needs attention, contact us through official project channels.</p>
+<h2>8. Your choices</h2>
+<p>You can stop using the app at any time. Requests relating to Reddit account information should be directed to Reddit through its official privacy and account controls. Requests concerning third-party providers should be directed to those providers.</p>
+<h2>9. Changes to this policy</h2>
+<p>We may revise this policy as the app or its providers change. The effective date above indicates when this page was last revised.</p>
+<h2>10. Contact</h2>
+<p>For questions about this policy, contact the BulbyBots project through its official community or repository channels.</p>\`
+);
+
+
 const html = String.raw`<!doctype html>
 <html lang="en">
 <head>
@@ -194,6 +280,12 @@ export default {
       } catch (error) {
         return Response.json({ok:false,error:"Live data feed unavailable"},{status:502,headers:{"Cache-Control":"no-store","X-Content-Type-Options":"nosniff"}});
       }
+    }
+    if (url.pathname === "/pi-market/terms" || url.pathname === "/pi-market/terms/") {
+      return new Response(request.method === "HEAD" ? null : termsPage,{headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=300","X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://cloudflareinsights.com; img-src 'self' https://bulbybot-header.bulbybot.workers.dev data:; base-uri 'none'; frame-ancestors 'none'"}});
+    }
+    if (url.pathname === "/pi-market/privacy" || url.pathname === "/pi-market/privacy/") {
+      return new Response(request.method === "HEAD" ? null : privacyPage,{headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"public, max-age=300","X-Content-Type-Options":"nosniff","Referrer-Policy":"strict-origin-when-cross-origin","Content-Security-Policy":"default-src 'self'; script-src 'self' 'unsafe-inline' https://bulbybot-header.bulbybot.workers.dev https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://cloudflareinsights.com; img-src 'self' https://bulbybot-header.bulbybot.workers.dev data:; base-uri 'none'; frame-ancestors 'none'"}});
     }
     if (url.pathname !== "/" && url.pathname !== "/index.html") {
       return new Response("Not found",{status:404,headers:{"Content-Type":"text/plain; charset=utf-8"}});
