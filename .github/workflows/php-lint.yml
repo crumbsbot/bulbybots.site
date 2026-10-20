@@ -1,0 +1,33 @@
+name: Validate shared-hosting PHP
+
+on:
+  push:
+    branches:
+      - main
+      - shared-hosting-deploy
+    paths:
+      - 'shared-hosting/**'
+      - '.github/workflows/php-lint.yml'
+  pull_request:
+    paths:
+      - 'shared-hosting/**'
+      - '.github/workflows/php-lint.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  php-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: curl
+
+      - name: Validate PHP syntax
+        run: php -l shared-hosting/index.php
